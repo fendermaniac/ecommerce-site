@@ -6,18 +6,13 @@ import {FaBars} from 'react-icons/fa';
 import './NavBar.css';
 
 
-const NavBar = (props) => {
-  return (         
-  <header className="navbar">
-  <span className="navbar-toggle" id="js-navbar-toggle"> 
+const NavBar = (props) => (<header className="navbar">
+  <span className="navbar-toggle" onClick={props.toggleMobileNav}>
     <FaBars />
   </span>
-   
-    <img src={bear} alt="bear" width="50px" className="logo"/>  
-    <Navigation />
-    <CartStatus cartCount={props.cartCount} />
-  </header> 
-);
-}
+  <img src={bear} alt="bear" width="50px" className="logo" />
+  <Navigation mobileNavClass={props.mobileNavClass} />
+  <CartStatus cartCount={props.cartCount} mobileNavClass={props.mobileNavClass} />
+</header>)
  
 export default NavBar;

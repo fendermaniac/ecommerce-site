@@ -1,8 +1,12 @@
-.main-nav {
-    list-style-type: none;
+
+  .hidden {
+    display: none;
   }
-  
-  .main-nav li {
+  .active {
+    list-style-type: none;
+    display: block;
+  }  
+  .active li {
     text-align: center;
     margin: 15px auto;
   }

@@ -5,13 +5,22 @@ import NavBar from './components/NavBar';
 
 class App extends Component {
   state = {
-    cartCount: 0
+    cartCount: 0,
+    showMobileNav: "hidden"
   }
+
+  toggleMobileNav = () => {
+    let css = (this.state.showMobileNav === "hidden") ? "active" : "hidden";
+    this.setState({ 
+      showMobileNav: css
+    })
+  } 
+
   render() {
     return ( 
     <Router>
       <div className="App">
-        <NavBar cartCount = {this.state.cartCount}/>
+        <NavBar cartCount = {this.state.cartCount} toggleMobileNav={this.toggleMobileNav} mobileNavClass={this.state.showMobileNav}/>
       </div>
     </Router>
     );

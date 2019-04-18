@@ -1,4 +1,10 @@
-.cart-status{
+
+.active{
     text-align: center;
     margin: 15px auto;
+    display: block;
+}
+
+.hidden {
+    display:none;
 }
