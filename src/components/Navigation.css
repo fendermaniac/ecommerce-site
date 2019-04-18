@@ -1,0 +1,8 @@
+.main-nav {
+    list-style-type: none;
+  }
+  
+  .main-nav li {
+    text-align: center;
+    margin: 15px auto;
+  }

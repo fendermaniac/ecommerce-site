@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
+import "./CartStatus.css";
 
 const CartStatus = (props) => {
   return ( 
-    <div>
+    <div className="cart-status">
       <FaShoppingCart /> {props.cartCount}
     </div>
    );
