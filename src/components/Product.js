@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Product = () => {
+const Product = ({ match }) => {
   return ( 
     <div>
-      <h2>Test Product</h2>
+      <h2>{match.params.product}</h2>
       <p>Reviews: ⭐⭐⭐⭐⭐</p>
       <img src="https://via.placeholder.com/150" alt="product example" />
       <p>Long Description of Product.Lorem ipsum dolor sit amet, 
