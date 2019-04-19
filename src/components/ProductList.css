@@ -1,0 +1,15 @@
+.product-list.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* height: 400px; */
+}
+
+.product-card {
+  /* display: inline; */
+  flex-basis: 300px;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
