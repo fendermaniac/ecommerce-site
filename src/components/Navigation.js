@@ -6,13 +6,13 @@ const Navigation = (props) => {
   return ( 
     <ul className={props.mobileNavClass}>
        <Link to="/">
-          <li>Home</li>
+          <li className="nav-links">Home</li>
        </Link>
        <Link to="/about">
-         <li>About</li>
+         <li className="nav-links">About</li>
       </Link>
       <Link to="/contact">
-        <li>Contact</li>
+        <li className="nav-links">Contact</li>
         </Link>
       
     </ul>

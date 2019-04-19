@@ -8,3 +8,14 @@
 .hidden {
     display:none;
 }
+
+@media screen and (min-width: 768px) { 
+    div.active, div.hidden{
+      display: flex;
+      margin-right: 30px;
+      flex-direction: row;
+      justify-content: flex-end;
+      list-style-type: none;
+      text-align: center;
+  }
+}

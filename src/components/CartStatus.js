@@ -5,7 +5,7 @@ import "./CartStatus.css";
 const CartStatus = (props) => {
   return ( 
     <div className={props.mobileNavClass}>
-      <FaShoppingCart /> {props.cartCount}
+      <FaShoppingCart /> &nbsp; {props.cartCount}
     </div>
    );
 }
