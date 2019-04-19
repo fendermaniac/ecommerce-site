@@ -26,12 +26,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    height: 70px;
+    height: 50px;
     align-items: center;
 }
 
 .logo {
-  margin-top: 0;
+  margin-top: 5px;
 }
 
 

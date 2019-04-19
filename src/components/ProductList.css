@@ -1,15 +1,25 @@
-.product-list.container {
+.product-list-container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  /* height: 400px; */
+  padding-top: 10px;
 }
 
 .product-card {
-  /* display: inline; */
   flex-basis: 300px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
+  padding: 2.5px;
   margin: auto;
 }
 
+.product-card h4, .product-card p {
+   text-align: center;
+   padding: 2.5px;
+}
+
+.product-card img, .product-card button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

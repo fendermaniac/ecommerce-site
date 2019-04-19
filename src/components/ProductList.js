@@ -6,15 +6,12 @@ const ProductList = (props) => {
   <div className="product-list-container">
     {props.inventory.map( item => 
       <div className="product-card">
-      <h2>{item.product_name} </h2>
+      <h4>{item.product_name} </h4>
       <img src="https://via.placeholder.com/150" alt="product example" />
-      {/* <p>{item.long_description}</p> */}
     <p>Price: {item.price}</p>
-      <button>Add to cart</button>
+      <button onClick={() => props.addToCart(item)}>Add to cart</button>
       </div>   
     )}
-    }
-  
   </div>
    );
 }

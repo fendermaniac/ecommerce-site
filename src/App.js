@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import ProductList from './components/ProductList';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 import './App.css';
 import data from './data/product_data.json';
 
@@ -26,6 +29,16 @@ class App extends Component {
     })
   } 
 
+  addToCart = (item) => {
+    this.setState({
+      cart: [...this.state.cart, item]
+    }, () => {
+      this.setState({
+        cartCount: this.state.cartCount + 1
+      })
+    })
+  } 
+
   render() {
     return ( 
     <Router>
@@ -35,10 +48,22 @@ class App extends Component {
           toggleMobileNav={this.toggleMobileNav} 
           mobileNavClass={this.state.showMobileNav}
         />
-        <ProductList 
+        {/* <ProductList 
           inventory = {this.state.inventory}
+          addToCart = {this.addToCart}
+        /> */}
+        <Route exact path="/" component={Home} />
+        <Route 
+          path="/shop" 
+          inventory = {this.state.inventory} 
+          addToCart = {this.addToCart} 
+          render={() => <ProductList inventory = {this.state.inventory} addToCart = {this.addToCart} /> } 
         />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
       </div>
+
+      
     </Router>
     );
   }

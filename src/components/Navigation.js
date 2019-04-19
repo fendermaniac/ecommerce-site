@@ -5,8 +5,8 @@ import './Navigation.css';
 const Navigation = (props) => {
   return ( 
     <ul className={props.mobileNavClass}>
-       <Link to="/store">
-          <li className="nav-links">Store</li>
+       <Link to="/shop">
+          <li className="nav-links">Shop</li>
        </Link>
        <Link to="/about">
          <li className="nav-links">About</li>
