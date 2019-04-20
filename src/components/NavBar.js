@@ -13,7 +13,10 @@ const NavBar = (props) => (<header className="navbar">
   </span>
   <Link to="/"><img src={bear} alt="bear" width="50px" className="logo" /></Link>
   <Navigation mobileNavClass={props.mobileNavClass} />
-  <CartStatus cartCount={props.cartCount} mobileNavClass={props.mobileNavClass} />
+  <Link to="/cart">
+    <CartStatus cartCount={props.cartCount} mobileNavClass={props.mobileNavClass} />
+  </Link>
+  
 </header>)
  
 export default NavBar;
