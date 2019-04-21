@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
 
-const Navigation = (props) => {
+const Navigation = ({mobileNavClass}) => {
   return ( 
-    <ul className={props.mobileNavClass}>
+    <ul className={mobileNavClass}>
        <Link to="/shop">
           <li className="nav-links">Shop</li>
        </Link>

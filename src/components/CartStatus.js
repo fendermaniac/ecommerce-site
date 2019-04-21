@@ -2,10 +2,10 @@ import React from 'react';
 import { FaShoppingCart } from 'react-icons/fa';
 import "./CartStatus.css";
 
-const CartStatus = (props) => {
+const CartStatus = ({mobileNavClass, cartCount}) => {
   return ( 
-    <div className={props.mobileNavClass}>
-      <FaShoppingCart /> &nbsp; {props.cartCount}
+    <div className={mobileNavClass}>
+      <FaShoppingCart /> &nbsp; {cartCount}
     </div>
    );
 }

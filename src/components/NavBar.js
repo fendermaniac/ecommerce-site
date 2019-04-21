@@ -7,14 +7,14 @@ import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 
-const NavBar = (props) => (<header className="navbar">
-  <span className="navbar-toggle" onClick={props.toggleMobileNav}>
+const NavBar = ({toggleMobileNav, mobileNavClass, cartCount}) => (<header className="navbar">
+  <span className="navbar-toggle" onClick={toggleMobileNav}>
     <FaBars />
   </span>
   <Link to="/"><img src={bear} alt="bear" width="50px" className="logo" /></Link>
-  <Navigation mobileNavClass={props.mobileNavClass} />
+  <Navigation mobileNavClass={mobileNavClass} />
   <Link to="/cart">
-    <CartStatus cartCount={props.cartCount} mobileNavClass={props.mobileNavClass} />
+    <CartStatus cartCount={cartCount} mobileNavClass={mobileNavClass} />
   </Link>
   
 </header>)
