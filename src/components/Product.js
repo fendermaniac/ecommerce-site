@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Product = ({ match }) => {
+const Product = ({ params }) => {
   return ( 
     <div>
-      <h2>{match.params.product}</h2>
+      <h2>{params.id}</h2>
       <p>Reviews: ⭐⭐⭐⭐⭐</p>
       <img src="https://via.placeholder.com/150" alt="product example" />
       <p>Long Description of Product.Lorem ipsum dolor sit amet, 

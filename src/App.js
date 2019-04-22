@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
+import NotFound from './components/NotFound';
 import './App.css';
 import data from './data/product_data.json';
 
@@ -61,9 +62,9 @@ class App extends Component {
           path="/cart" 
           render={() => <Cart cart = {this.state.cart}  /> } 
         />
-        <Route path="products/:product" render={() => <Product {...this.props} />}  />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
+        {/* <Route path={"*"} component={NotFound} /> */}
       </div>
 
       

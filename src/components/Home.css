@@ -1,0 +1,14 @@
+.home {
+    color: white;
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+    background-image: url('https://njkx.imgeng.in/w_auto,1300/https://images.unsplash.com/9/DeepInTheForest_cre8art4life_JulieGeiger.jpg');
+    min-height: 400px;
+}
+
+.store-btn {
+    position: absolute;
+    top:40%;
+    left:38%
+}

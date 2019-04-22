@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ProductCard = ({item, addToCart}) => {
   return ( 
     <div className="product-card">
-    <Link to={`/products/${item.product_name.replace(/\s+|,|-+/g, '')}`}>
+    <Link to={`/products/${item.id}`}>
         <h4>{item.product_name} </h4>
     </Link>
     <img src="https://via.placeholder.com/150" alt="product example" />
