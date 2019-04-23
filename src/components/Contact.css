@@ -1,0 +1,11 @@
+.contact-container {
+  text-align: center;
+  padding: 25px;
+}
+
+input, textarea {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  min-width: 500px;
+}

@@ -1,0 +1,22 @@
+.cart-container {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  padding: 10px;
+}
+
+.thumbnail {
+  float: left;
+}
+
+.subtotal {
+  padding: 10px;
+  font-weight: 700;
+}

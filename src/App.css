@@ -5,4 +5,35 @@
 }
 body {
   font-family: 'Josefin Sans', sans-serif;
+  background-color: #f8f1ff;
+  color: #534D56;
+}
+
+.btn {
+  background-color: #1b998b;
+  border: none;
+  color: #f8f1ff;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.btn:hover {
+  background-color: seagreen;
+}
+
+.btn-small {
+  background-color: #1b998b;
+  border: none;
+  color: #f8f1ff;
+  padding: 5px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.btn-small:hover {
+  background-color: seagreen;
+
 }

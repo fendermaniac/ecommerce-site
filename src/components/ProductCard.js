@@ -8,8 +8,8 @@ const ProductCard = ({item, addToCart}) => {
         <h4>{item.product_name} </h4>
     </Link>
     <img src="https://via.placeholder.com/150" alt="product example" />
-      <p>Price: {item.price}</p>
-    <button onClick={() => addToCart(item)}>Add to cart</button>
+      <p><strong>Price: </strong>{item.price}</p>
+    <button className="btn-small" onClick={() => addToCart(item)}>Add to cart</button>
     </div>   
    );
 }

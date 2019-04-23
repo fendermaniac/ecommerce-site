@@ -1,5 +1,5 @@
 import React from 'react';
-import bear from '../bear.png';
+import bear from '../bear.svg';
 import Navigation from './Navigation';
 import CartStatus from './CartStatus';
 import {FaBars} from 'react-icons/fa';

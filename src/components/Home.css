@@ -1,14 +1,38 @@
-.home {
-    color: white;
-    padding: 5px;
+.home-banner {
+    padding: 50px 0 0 0;
     text-align: center;
     margin: auto;
-    background-image: url('https://njkx.imgeng.in/w_auto,1300/https://images.unsplash.com/9/DeepInTheForest_cre8art4life_JulieGeiger.jpg');
+    background-image: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+    background-size: cover;
     min-height: 400px;
 }
 
 .store-btn {
     position: absolute;
-    top:40%;
-    left:38%
+    top:55%;
+    left:45%;
+}
+
+.store-btn:hover {
+    background-color: seagreen;
+}
+
+.featured-items {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.featured-image {
+    background-image: url('https://images.pexels.com/photos/35435/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=400');
+    width: 50%;
+    padding-top: 400px;
+    object-fit: contain;
+}
+
+.featured-content {
+    min-height: 400px;
+    width: 50%;
+    background-color: #decdf5;
+    text-align: center;
+    padding: 150px 50px;
 }
