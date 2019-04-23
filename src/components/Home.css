@@ -8,9 +8,7 @@
 }
 
 .store-btn {
-    position: absolute;
-    top:55%;
-    left:45%;
+    margin: auto;
 }
 
 .store-btn:hover {
@@ -24,15 +22,28 @@
 
 .featured-image {
     background-image: url('https://images.pexels.com/photos/35435/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=400');
-    width: 50%;
+    width: 100%;
     padding-top: 400px;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .featured-content {
     min-height: 400px;
-    width: 50%;
+    width: 100%;
     background-color: #decdf5;
     text-align: center;
     padding: 150px 50px;
+}
+
+@media screen and (min-width: 768px) { 
+    .featured-image {
+    width: 50%;
+    object-fit: contain;   
+}
+
+.featured-content {
+    width: 50%;
+} 
+
+
 }
