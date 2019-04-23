@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from './components/NavBar';
 import ProductList from './components/ProductList';
-import Product from './components/Product';
 import Cart from './components/Cart';
 import Home from './components/Home';
+import Footer from './components/Footer';
 import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
@@ -40,7 +40,23 @@ class App extends Component {
         cartCount: this.state.cartCount + 1
       })
     })
-  } 
+    
+  }
+
+  checkOut = () => {
+    this.setState({
+      cart: [],
+      cartCount: 0
+    })
+  }
+
+  handleChange = () => {
+
+  }
+
+  handleSubmit = () => {
+    
+  }
 
   render() {
     return ( 
@@ -51,6 +67,7 @@ class App extends Component {
           toggleMobileNav={this.toggleMobileNav} 
           mobileNavClass={this.state.showMobileNav}
         />
+        <div className="content">
         <Route exact path="/" component={Home} />
         <Route 
           path="/shop" 
@@ -60,13 +77,13 @@ class App extends Component {
         />
         <Route 
           path="/cart" 
-          render={() => <Cart cart = {this.state.cart}  /> } 
+          render={() => <Cart cart = {this.state.cart} checkOut = {this.checkOut}  /> } 
         />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />
-        {/* <Route path={"*"} component={NotFound} /> */}
+        </div>      
+      <Footer />
       </div>
-
       
     </Router>
     );

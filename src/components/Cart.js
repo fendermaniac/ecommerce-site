@@ -2,11 +2,12 @@ import React from 'react';
 import accounting from 'accounting';
 import './Cart.css'
 
-const Cart = ({cart}) => {
+const Cart = ({cart, checkOut}) => {
     return ( 
-      
+        <div>
+        <h1 className="cart-header">Your Shopping Cart</h1>
         <div className="cart-container">
-        <h1>Your Cart</h1>
+        
         <div className="cart-items">
         {cart.map(item => 
             <div className="cart-item">
@@ -17,18 +18,28 @@ const Cart = ({cart}) => {
         )
     }   
         </div>
-        <p className="subtotal">Subtotal: &nbsp;
+        <div className="cart-summary">
+                
+        {cart.length > 0 ? 
+          (<>
+          <p className="subtotal">Subtotal: &nbsp;
           {accounting.formatMoney(cart.reduce(
             (currentValue, item) => 
             {return parseFloat(item.price.replace(/\$/g, '')) + currentValue}, 0))
           }
         </p>
-
-        {cart.length > 0 ? 
-          (<button className="btn">Check Out</button>) : 
-          (<p>Cart is empty</p>) 
-        }        
+          <button className="btn" onClick={checkOut}>Check Out</button>
+          </>
+          ) : 
+          (
+          <div className="empty-cart">
+          <p>Your cart is empty!</p></div>) 
+        } 
         </div>
+       
+        </div>  
+        </div>
+
      );
 }
  

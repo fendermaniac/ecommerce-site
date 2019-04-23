@@ -1,11 +1,35 @@
-.cart-container {
-  padding-top: 10px;
+.cart-header {
+  padding: 10px;
   text-align: center;
+  
+
+}
+
+.cart-container {
+  text-align: center;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-summary {
+  flex-basis: 25%;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  
+  background-color: #534D56;
+  color: #f8f1ff;
 }
 
 .cart-items {
+  flex-basis: 75%;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
 }
 
 .cart-item {
