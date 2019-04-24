@@ -46,8 +46,21 @@ class App extends Component {
       this.setState({
         cartCount: this.state.cartCount + 1
       })
-    })
-    
+    }) 
+  }
+
+  removeFromCart = (item) => {
+    if (this.state.cart.length !== -1 ) {
+      let newCart = this.state.cart;
+      newCart.splice(item, 1);
+      this.setState({
+       cart: newCart
+      }, () => {
+        this.setState({
+          cartCount: this.state.cartCount - 1
+        })
+     })
+    }
   }
 
   checkOut = () => {
@@ -89,7 +102,11 @@ class App extends Component {
         />
         <Route 
           path="/cart" 
-          render={() => <Cart cart = {this.state.cart} checkOut = {this.checkOut}  /> } 
+          render={() => 
+            <Cart 
+              cart = {this.state.cart} 
+              removeFromCart = {this.removeFromCart}
+              checkOut = {this.checkOut}  /> } 
         />
         <Route path="/about" component={About} />
         <Route path="/contact" component={Contact} />

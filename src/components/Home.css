@@ -1,10 +1,12 @@
 .home-banner {
-    padding: 50px 0 0 0;
+    padding: 75px 0 0 0;
     text-align: center;
     margin: auto;
     background-image: url('https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-size: cover;
-    min-height: 400px;
+    min-height: 300px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
 }
 
 .store-btn {

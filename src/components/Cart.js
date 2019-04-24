@@ -2,7 +2,7 @@ import React from 'react';
 import accounting from 'accounting';
 import './Cart.css'
 
-const Cart = ({cart, checkOut}) => {
+const Cart = ({cart, checkOut, removeFromCart}) => {
     return ( 
         <div>
         <h1 className="cart-header">Your Shopping Cart</h1>
@@ -14,6 +14,7 @@ const Cart = ({cart, checkOut}) => {
             <img src="https://via.placeholder.com/75" alt="thumbnail" />
                 <h3>{item.product_name}</h3>
                 <p>Price: {item.price}</p>
+                <button className="btn-small" onClick={removeFromCart}>Remove from Cart</button>
             </div>
         )
     }   

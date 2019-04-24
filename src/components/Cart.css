@@ -1,8 +1,6 @@
 .cart-header {
   padding: 10px;
   text-align: center;
-  
-
 }
 
 .cart-container {
@@ -19,28 +17,32 @@
   padding: 10px;
   margin: 10px;
   text-align: center;
-  
   background-color: #534D56;
   color: #f8f1ff;
 }
 
 .cart-items {
-  flex-basis: 75%;
-  padding: 10px;
+  flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
-
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-item {
   padding: 10px;
 }
 
-.thumbnail {
-  float: left;
-}
-
 .subtotal {
   padding: 10px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 768px) { 
+  .cart-items {
+    flex-basis: 75%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
