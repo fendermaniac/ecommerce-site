@@ -32,6 +32,13 @@ class App extends Component {
     })
   } 
 
+  sortPriceAsc = () => {
+    this.setState(prevState => {
+      this.state.inventory.sort(
+        (a,b) => parseFloat(a.price.replace(/\$/g, '')) - parseFloat(b.price.replace(/\$/g, '')))
+    })
+  }
+
   addToCart = (item) => {
     this.setState({
       cart: [...this.state.cart, item]
@@ -73,7 +80,12 @@ class App extends Component {
           path="/shop" 
           inventory = {this.state.inventory} 
           addToCart = {this.addToCart} 
-          render={() => <ProductList inventory = {this.state.inventory} addToCart = {this.addToCart} /> } 
+          render={() => 
+            <ProductList 
+              inventory = {this.state.inventory} 
+              addToCart = {this.addToCart} 
+              sortPriceAsc = {this.sortPriceAsc}
+              /> } 
         />
         <Route 
           path="/cart" 

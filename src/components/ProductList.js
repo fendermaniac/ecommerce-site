@@ -4,9 +4,10 @@ import ProductCard from './ProductCard';
 import Product from './Product';
 import './ProductList.css'
 
-const ProductList = ({inventory, addToCart}) => {
+const ProductList = ({inventory, addToCart, sortPriceAsc}) => {
   return ( 
   <div className="product-list-container">
+  {/* <button onClick={sortPriceAsc}>Sort Asc</button> */}
   <Router>
       {inventory.map( item => 
       <ProductCard 
