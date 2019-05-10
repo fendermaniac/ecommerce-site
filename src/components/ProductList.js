@@ -2,16 +2,17 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import ProductCard from './ProductCard';
 import Product from './Product';
+import ProductSidebar from './ProductSidebar'
 import './ProductList.css'
 
-const ProductList = ({inventory, addToCart, sortPriceAsc}) => {
+const ProductList = ({inventory, addToCart, sortPriceAsc, updateFilterProductsInput}) => {
   return ( <>
   <h1 className="product-header">Products</h1>   
   <div className="main-container">
-  <aside className="aside">
+  <ProductSidebar className="aside" updateFilterProductsInput = {updateFilterProductsInput}>
   Search: 
   Filter: 
-  </aside> 
+  </ProductSidebar> 
   <div className="product-list-container">
   
   {/* <button onClick={ sortPriceAsc }>Sort Asc</button> */}

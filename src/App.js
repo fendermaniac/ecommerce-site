@@ -16,7 +16,8 @@ class App extends Component {
     inventory: [],
     cart: [],
     cartCount: 0,
-    showMobileNav: "hidden"
+    showMobileNav: "hidden",
+    filterTextInput: ""
   }
 
   componentDidMount() {
@@ -24,6 +25,19 @@ class App extends Component {
       inventory: [...data]
     })
   }
+
+  updateFilterProductsInput = (e) => {
+    this.setState({
+      filterTextInput: e.target.value,
+    }, () => {
+      if(this.state.filterTextInput !== "") {
+        this.setState({
+          inventory: this.state.inventory.filter(item => item.product_name.includes(this.state.filterTextInput))
+        })
+      }
+    })
+  }
+
 
   toggleMobileNav = () => {
     let css = (this.state.showMobileNav === "hidden") ? "active" : "hidden";
@@ -98,6 +112,7 @@ class App extends Component {
               inventory = {this.state.inventory} 
               addToCart = {this.addToCart} 
               sortPriceAsc = {this.sortPriceAsc}
+              updateFilterProductsInput = {this.updateFilterProductsInput}
               /> } 
         />
         <Route 
