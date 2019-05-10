@@ -7,7 +7,7 @@ const ProductCard = ({item, addToCart}) => {
     <Link to={`/products/${item.id}`}>
         <h4>{item.product_name} </h4>
     </Link>
-    <img src="https://via.placeholder.com/150" alt="product example" />
+    <img src="https://picsum.photos/200" alt="product example" />
       <p><strong>Price: </strong>{item.price}</p>
     <button className="btn-small" onClick={() => addToCart(item)}>Add to cart</button>
     </div>   

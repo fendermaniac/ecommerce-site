@@ -11,7 +11,7 @@ const Cart = ({cart, checkOut, removeFromCart}) => {
         <div className="cart-items">
         {cart.map(item => 
             <div className="cart-item">
-            <img src="https://via.placeholder.com/75" alt="thumbnail" />
+            <img src="https://picsum.photos/75" alt="thumbnail" />
                 <h3>{item.product_name}</h3>
                 <p>Price: {item.price}</p>
                 <button className="btn-small" onClick={removeFromCart}>Remove from Cart</button>

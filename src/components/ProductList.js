@@ -5,9 +5,16 @@ import Product from './Product';
 import './ProductList.css'
 
 const ProductList = ({inventory, addToCart, sortPriceAsc}) => {
-  return ( 
+  return ( <>
+  <h1 className="product-header">Products</h1>   
+  <div className="main-container">
+  <aside className="aside">
+  Search: 
+  Filter: 
+  </aside> 
   <div className="product-list-container">
-  {/* <button onClick={sortPriceAsc}>Sort Asc</button> */}
+  
+  {/* <button onClick={ sortPriceAsc }>Sort Asc</button> */}
   <Router>
       {inventory.map( item => 
       <ProductCard 
@@ -20,6 +27,7 @@ const ProductList = ({inventory, addToCart, sortPriceAsc}) => {
   </Router>
   
   </div>
+  </div> </>
    );
 }
  

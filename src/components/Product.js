@@ -5,7 +5,7 @@ const Product = ({ params }) => {
     <div>
       <h2>{params.id}</h2>
       <p>Reviews: ⭐⭐⭐⭐⭐</p>
-      <img src="https://via.placeholder.com/150" alt="product example" />
+      <img src="https://picsum.photos/200" alt="product example" />
       <p>Long Description of Product.Lorem ipsum dolor sit amet, 
          consectetur adipiscing elit, sed do eiusmod tempor incididunt 
          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
