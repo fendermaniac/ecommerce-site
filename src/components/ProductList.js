@@ -5,11 +5,23 @@ import Product from './Product';
 import ProductSidebar from './ProductSidebar'
 import './ProductList.css'
 
-const ProductList = ({inventory, addToCart, sortPriceAsc, updateFilterProductsInput}) => {
+const ProductList = ({ 
+  filteredInventory, 
+  addToCart, 
+  sortPriceAsc, 
+  updateFilterProductsInput, 
+  filterTextInput,
+  clearFilter
+  }) => {
   return ( <>
   <h1 className="product-header">Products</h1>   
   <div className="main-container">
-  <ProductSidebar className="aside" updateFilterProductsInput = {updateFilterProductsInput}>
+  <ProductSidebar 
+    className="aside" 
+    updateFilterProductsInput = {updateFilterProductsInput}
+    filterTextInput = {filterTextInput}
+    clearFilter = {clearFilter}
+  >
   Search: 
   Filter: 
   </ProductSidebar> 
@@ -17,7 +29,7 @@ const ProductList = ({inventory, addToCart, sortPriceAsc, updateFilterProductsIn
   
   {/* <button onClick={ sortPriceAsc }>Sort Asc</button> */}
   <Router>
-      {inventory.map( item => 
+      {filteredInventory.map( item => 
       <ProductCard 
       item = {item}
       addToCart = {addToCart}

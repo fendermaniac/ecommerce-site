@@ -14,6 +14,7 @@ import data from './data/product_data.json';
 class App extends Component {
   state = {
     inventory: [],
+    filteredInventory: [],
     cart: [],
     cartCount: 0,
     showMobileNav: "hidden",
@@ -23,6 +24,10 @@ class App extends Component {
   componentDidMount() {
     this.setState({
       inventory: [...data]
+    }, () => {
+      this.setState({
+        filteredInventory: this.state.inventory
+      })
     })
   }
 
@@ -32,9 +37,16 @@ class App extends Component {
     }, () => {
       if(this.state.filterTextInput !== "") {
         this.setState({
-          inventory: this.state.inventory.filter(item => item.product_name.includes(this.state.filterTextInput))
+          filteredInventory: this.state.inventory.filter(item => item.product_name.toLowerCase().includes(this.state.filterTextInput.toLowerCase()))
         })
-      }
+      }      
+    })
+  }
+
+  clearFilter = () => {
+    this.setState({
+      filterTextInput: "",
+      filteredInventory: this.state.inventory
     })
   }
 
@@ -110,9 +122,12 @@ class App extends Component {
           render={() => 
             <ProductList 
               inventory = {this.state.inventory} 
+              filteredInventory = {this.state.filteredInventory}
               addToCart = {this.addToCart} 
               sortPriceAsc = {this.sortPriceAsc}
               updateFilterProductsInput = {this.updateFilterProductsInput}
+              filterTextInput = {this.state.filterTextInput}
+              clearFilter = {this.clearFilter}
               /> } 
         />
         <Route 
